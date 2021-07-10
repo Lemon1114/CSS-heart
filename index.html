@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>跳动的心</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .heart {
+        position: relative;
+        margin: 0 auto;
+        width: 333px;
+        /* transition: all 1s; */
+        animation: beatHeart 0.8s linear 0.3s infinite alternate;
+      }
+      .heart > div {
+        background-color: red;
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+      }
+      .heart .left {
+        border-radius: 50% 0 0 50%;
+        transform: rotate(45deg) translateX(67px) translateY(2.2px);
+      }
+      .heart .right {
+        border-radius: 50% 50% 0 0;
+        transform: rotate(45deg) translateX(73.5px);
+      }
+      .heart .center {
+        transform: rotate(45deg) translateY(150px);
+      }
+      .heart:hover {
+        transform: scale(2);
+      }
+      @keyframes beatHeart {
+        0% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(1.5);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="heart">
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="center"></div>
+    </div>
+  </body>
+</html>
